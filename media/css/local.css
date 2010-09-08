@@ -1,0 +1,45 @@
+/* Override YUI font base and use 16/20px as default size. */
+body {
+	font: 16px/1.25 arial,helvetica,clean,sans-serif;
+}
+
+#header {
+	background: #b1bab6;
+	color: #615c53;
+	border-bottom: 1px solid #38322a;
+}
+
+#header h1 {
+	margin: 0;
+	padding: 1em;
+}
+
+#content {
+	background: #d7e2e5;
+	color: #38322a;
+	padding: 1em;
+}
+
+a {
+	color: blue;
+	text-decoration: none;
+}
+
+a:visited {
+	color: auto;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.highlight {
+	font-weight: bold;
+}
+
+.smallmap {
+     width: 800px;
+     height: 600px;
+     border: 1px solid black;
+}
+

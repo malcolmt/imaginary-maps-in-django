@@ -1,0 +1,25 @@
+<Map>
+    <Datasource name="base-map">
+        <Parameter name="type">raster</Parameter>
+        <!-- File names (by default) are relative to this XML file's location,
+             so the following works for the current file layout. -->
+        <Parameter name="file">../media/maps/island-base.tiff</Parameter>
+        <Parameter name="format">tiff</Parameter>
+        <Parameter name="lox">150.0</Parameter>
+        <Parameter name="loy">-0.086819436124827731</Parameter>
+        <Parameter name="hix">150.11498435636727</Parameter>
+        <Parameter name="hiy">0.0</Parameter>
+    </Datasource>
+
+    <Style name="basic">
+        <Rule>
+            <RasterSymbolizer />
+        </Rule>
+    </Style>
+
+    <Layer name="base" title="island" abstract="High-level island colour map.">
+        <Datasource base="base-map"/>
+        <StyleName>basic</StyleName>
+    </Layer>
+</Map>
+

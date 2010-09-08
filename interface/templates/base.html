@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/ xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>{% block title %}{{ title }}{% endblock %}</title>
+        <link rel="stylesheet" href="{{MEDIA_URL}}css/reset-fonts-grids.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="{{MEDIA_URL}}css/base-min.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="{{MEDIA_URL}}css/local.css" type="text/css" media="screen, projection" />
+        {% block scripts %}{% endblock %}
+        {% block extrahead %}{% endblock %}
+    </head>
+
+    <body onload=init()>
+        <div id="'doc3">
+            <div id="header">
+                {% block header %}<h1>{{ title }}</h1>{% endblock %}
+            </div>
+            <div id="content">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </body>
+</html>
+
