@@ -138,6 +138,8 @@ The javascript code in `interface/templates/interface/simple.html` is also a
 key part of this functionality.
 
 Best of luck!
+
 Malcolm Tredinnick
 (Sydney, Australia)
+
 
