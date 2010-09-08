@@ -45,9 +45,9 @@ Setting up
 This code is intended as a self-contained, runnable small example, written with
 reasonably professional coding standards in mind.
 
-That being said, a few pre-requisites need to be installed in order to run the
+That being said, a few prerequisites need to be installed in order to run the
 example. I am assuming you have worked through the `django.contrib.gis`
-tutorial_ and thus have all the necessary pre-requisites installed. If you can
+tutorial_ and thus have all the necessary prerequisites installed. If you can
 view any Django admin page that involves GIS information, you have met the
 requirements here.
 
@@ -73,11 +73,11 @@ To do a setup from scratch (assuming Postgis for the first step), I ran the
 following steps, in order:
 
  1. Create the GIS-aware database: `createdb -T template_postgis
-    imaginary_lands`. Assumes you already have `template_postgis` created as per
-   Geodjango setup instructions.
+    imaginary_lands`. Assumes you already have `template_postgis` created as
+    per Geodjango setup instructions.
  2. `python manage.py syncdb --noinput` to do the basic model creation. This
-    will load an initial fixtures file and create and admin user, with both
-    username and password being "*admin*" (without the quotes).
+    will load an initial fixtures file to create an admin user. The username
+    and password for this user are both "*admin*" (without the quotes).
  3. `python manage.py import_land` and `python manage.py import_adventures` to
     load initial shape data into the GIS models.
  4. Create the GeoTiff version of the base map (only the PNG version is checked
@@ -130,9 +130,14 @@ directory contains a `data/` subdirectory that contains the raw shape files
 that are imported into GeoDjango. You can inspect those with tools like
 `ogrinfo`, as described in the GeoDjango tutorial.
 
-The `interface/` directory hides the main view and the views that are called by
-OpenLayers to populate the data. These would be a fair bit more fleshed out in
-a "real world" application, but they are correct for the small-scale operation
-here. The javascript code in `interface/templates/interface/simple.html` is
-also a key part of this equation.
+The `interface/` directory contains the main HTML-generating view, as well as
+the views that are called by OpenLayers to populate the data (it's the web
+interface for the data). These would be a fair bit more fleshed out in a "real
+world" application, but they are correct for the small-scale operation here.
+The javascript code in `interface/templates/interface/simple.html` is also a
+key part of this functionality.
+
+Best of luck!
+Malcolm Tredinnick
+(Sydney, Australia)
 
