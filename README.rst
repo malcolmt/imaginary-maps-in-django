@@ -55,9 +55,9 @@ Secondly, you'll need to have Mapnik_ installed (and Mapnik's Python bindings).
 Major Linux distributions will ship these as packages that won't require
 anything more than a `yum install ...` or `aptitude install...`. I've been led
 to believe it isn't amazingly difficult to get the necessary pieces installed
-on a Mac, as well. I have on idea about the level of difficulty for a Windows
-install (feedback welcome). If you can run the following at a Python prompt and
-no exception is raised, you have the necessary components installed::
+on a Mac OS X and Windows as well [*]_. If you can run the following at a
+Python prompt and no exception is raised, you have the necessary components
+installed::
 
     >>> from mapnik import ogcserver
 
@@ -142,4 +142,6 @@ Best of luck!
 Malcolm Tredinnick
 (Sydney, Australia)
 
-
+.. [*] I have no direct experience with either platform. However, a credible
+       source wrote to say that installing Mapnik and Python bindings on
+       Windows XP, SP2 was *"a breeze."*
