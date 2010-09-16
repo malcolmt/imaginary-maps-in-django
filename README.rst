@@ -78,7 +78,7 @@ following steps, in order:
  2. `python manage.py syncdb --noinput` to do the basic model creation. This
     will load an initial fixtures file to create an admin user. The username
     and password for this user are both "*admin*" (without the quotes).
- 3. `python manage.py import_land` and `python manage.py import_adventures` to
+ 3. `python manage.py import_lands` and `python manage.py import_adventures` to
     load initial shape data into the GIS models.
  4. Create the GeoTiff version of the base map (only the PNG version is checked
     in)::
