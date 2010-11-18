@@ -1,6 +1,6 @@
 """
 The interface that sets up our WMS server with the maps and layers we're able
-to server.
+to serve.
 
 Based on http://trac.mapnik.org/browser/trunk/docs/ogcserver/readme.txt
 """
