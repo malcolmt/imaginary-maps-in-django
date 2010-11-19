@@ -5,8 +5,8 @@ Maps of Imaginary Lands
 Introduction
 =============
 
-Supporting code and slides for a talk originally given at DjangoCon-US,
-September 2010 (in Portland, Oregon, USA).
+Supporting code and slides for a talk introducing customised usage of
+Django's GIS components, Mapnik and OpenLayers. Originally presented at DjangoCon-US, September 2010 (Portland, Oregon, USA) in a short form and then at Kiwi Pycon (Bay of Islands, New Zealand) in November, 2010.
 
 Short Description
 ------------------
@@ -15,7 +15,7 @@ The GIS features of Django aren't restricted to being applied to real world
 maps and planets. This talk will show how to display and interact with maps of
 imaginary lands, such as game maps or lands in science fiction novels. We'll
 uncover a bit of how Django GIS works in the process, separating the map
-display from the modeling.
+display from the modelling.
 
 Abstract
 ---------
@@ -24,7 +24,7 @@ Whilst ``django.contrib.gis`` isn't particularly difficult to get started with,
 particularly if you follow the tutorials, it can sometimes seem a bit
 overwhelming in the way it goes from zero to fancy maps in only a couple of
 steps. I'd like to demystify some of the pieces of the stack, pulling apart the
-modeling support — specifying the data are we trying to work with — from the
+modelling support — specifying the data are we trying to work with — from the
 display and client-side portion.
 
 To make this more than a dry technical dive, I'll show how to add extras to an
@@ -42,8 +42,8 @@ things out.
 Setting up
 ===========
 
-This code is intended as a self-contained, runnable small example, written with
-reasonably professional coding standards in mind.
+This code is intended as a small self-contained, executable example, written
+with reasonably professional coding standards in mind.
 
 That being said, a few prerequisites need to be installed in order to run the
 example. I am assuming you have worked through the ``django.contrib.gis``
@@ -109,11 +109,7 @@ Navigating the code
 
 Hopefully the code is written and commented clearly enough that somebody
 familiar with Django can follow along. I have tried to write in a non-throwaway
-style, so any code you see here is how I would do something in production.  I
-guess, there's one exception to this: the Javascript in
-``interface/templates/interface/simple.py`` is fairly throwaway code to make
-the main page map display work. I would tidy that up a lot in a production
-deployment.
+style, so any code you see here is how I would do something in production.
 
 The standalone Mapnik server configuration is all in the ``map_server/``
 directory. The only piece that is particular to a local development
