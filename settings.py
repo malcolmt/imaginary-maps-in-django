@@ -24,7 +24,7 @@ USE_I18N = True
 USE_L10N = True
 
 MEDIA_ROOT = ''
-MEDIA_URL = '/static/'
+MEDIA_URL = '/static_data/'
 ADMIN_MEDIA_PREFIX = '/media/'
 
 SECRET_KEY = '(okqqmuqmi_%10@ob3jn&@@s-qo(lnz9x0w=rc_9z)4jz0y+tl'
