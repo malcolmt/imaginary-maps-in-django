@@ -1,4 +1,6 @@
+// Although this example doesn't access "map" outside of init(), one will typically be using it in a few different callback methods, so it makes sense to store it (and associated map data) at this level.
 var map;
+
 // The bounding box and centre of the region we're interested in displaying.
 var ul_lon = 150.0;
 var ul_lat = 0.0;
