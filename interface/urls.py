@@ -1,12 +1,21 @@
-from django.conf.urls.defaults import *     # pylint: disable-msg=W0401,W0614
-from django.views.generic.simple import direct_to_template
+from django.conf.urls.defaults import patterns, url
+from django.views import generic
 
 from interface import views
 
+
+class TemplateView(generic.TemplateView):
+    template_name = "interface/simple.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(TemplateView, self).get_context_data(**kwargs)
+        context["title"] = "Imaginary Island Map"
+        return context
+
+
 urlpatterns = patterns('',
-    ("^$", direct_to_template, {"template": "interface/simple.html",
-            "extra_context": {"title": "Imaginary Island Map"}}),
-    ("^tracks/$", views.tracks),
-    ("^places/$", views.places),
+    url("^$", TemplateView.as_view()),
+    url("^tracks/$", views.tracks),
+    url("^places/$", views.places),
 )
 

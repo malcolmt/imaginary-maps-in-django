@@ -5,8 +5,10 @@ Maps of Imaginary Lands
 Introduction
 =============
 
-Supporting code and slides for a talk introducing customised usage of
-Django's GIS components, Mapnik and OpenLayers. Originally presented at DjangoCon-US, September 2010 (Portland, Oregon, USA) in a short form and then at Kiwi Pycon (Bay of Islands, New Zealand) in November, 2010.
+Supporting code and slides for a talk introducing customised usage of Django's
+GIS components, Mapnik and OpenLayers. Originally presented at DjangoCon-US,
+September 2010 (Portland, Oregon, USA) in a short form and then at Kiwi Pycon
+(Bay of Islands, New Zealand) in November, 2010 and PyCon-APAC in June, 2012.
 
 Short Description
 ------------------
@@ -39,11 +41,30 @@ Some basic familiarity with Django's GIS features would be useful for this
 talk, although it might also serve as a motivating introduction to trying
 things out.
 
+Aside: Creating map graphics
+-----------------------------
+
+Over the years, a number of people have asked how I created the island map
+image for this presentation.
+
+The main graphic was done using the Gimp_, following tutorials at `The
+Cartographer's Guild`_ website. I have spent hours playing with their
+map-making tutorials and trying out different things.
+
+The shapefiles describing the island boundaries and paths and points of
+interest were creating in QGis_, a professional level tool that is highly accessible to amateurs and with a very supportive online community of tutorials and tips.
+
+.. _Gimp: http://http://www.gimp.org/
+.. _The Cartographer's Guild: http://www.cartographersguild.com/
+.. _QGis: http://www.qgis.org/
+
 Setting up
 ===========
 
 This code is intended as a small self-contained, executable example, written
 with reasonably professional coding standards in mind.
+
+All the code here has been verified to run against Django 1.4 (as of June, 2012).
 
 That being said, a few prerequisites need to be installed in order to run the
 example. I am assuming you have worked through the ``django.contrib.gis``
@@ -55,11 +76,18 @@ Secondly, you'll need to have Mapnik_ installed (and Mapnik's Python bindings).
 Major Linux distributions will ship these as packages that won't require
 anything more than a ``yum install ...`` or ``aptitude install...``. I've been
 led to believe it isn't amazingly difficult to get the necessary pieces
-installed on a Mac OS X and Windows as well [*]_. If you can run the following
+installed on a Mac OS X and Windows as well [1]_. If you can run the following
 at a Python prompt and no exception is raised, you have the necessary
 components installed::
 
-    >>> from mapnik import ogcserver
+    >>> from mapnik2 import ogcserver
+
+This assumes you are running mapnik-python version 2.0. If you are using an
+earlier version (0.7) of mapnik and mapnik-python, you will need to import
+``mapnik``, rather than ``mapnik2`` [2]_. There are obviously other differences
+between the earlier and later versions of mapnik, however, for the most part,
+things are forwards compatible and the code here will work without change once
+the import is correct.
 
 .. _tutorial: http://docs.djangoproject.com/en/1.2/ref/contrib/gis/tutorial/
 .. _Mapnik: http://mapnik.org/
@@ -140,6 +168,11 @@ Best of luck!
 Malcolm Tredinnick
 (Sydney, Australia)
 
-.. [*] I have no direct experience with either platform. However, a credible
+.. [1] I have no direct experience with either platform. However, a credible
        source wrote to say that installing Mapnik and Python bindings on
        Windows XP, SP2 was *"a breeze."*
+
+.. [2] In Mapnik 2.1, the Python module will again be called ``mapnik``. Then
+       ``mapnik2`` name was to allow 0.7 and 2.0 to be run in parallel for a
+       while.
+

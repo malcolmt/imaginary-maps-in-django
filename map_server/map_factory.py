@@ -7,7 +7,7 @@ Based on http://trac.mapnik.org/browser/trunk/docs/ogcserver/readme.txt
 
 import os
 
-from mapnik.ogcserver import WMS
+from mapnik2.ogcserver import WMS
 
 
 MAPFILE_XML = os.path.join(os.path.dirname(__file__), "island.xml")

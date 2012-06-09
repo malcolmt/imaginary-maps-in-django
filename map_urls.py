@@ -1,9 +1,8 @@
 import os
 
 from django.conf import settings
-from django.conf.urls.defaults import *     # pylint: disable-msg=W0401,W0614
+from django.conf.urls.defaults import include, patterns
 from django.contrib import admin
-from django.views.static import serve
 
 admin.autodiscover()
 
@@ -13,6 +12,8 @@ urlpatterns = patterns('',
 )
 
 if settings.DEV_MODE:
+    from django.views.static import serve
+
     static_path = os.path.join(settings.PROJ_ROOT, "media")
     urlpatterns += patterns("",
         ("^static_data/(.*)$", serve, {"document_root": static_path}),

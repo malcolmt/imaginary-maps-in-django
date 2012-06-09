@@ -1,4 +1,4 @@
-<Map>
+<Map minimum-version="0.7.2">
     <Datasource name="base-map">
         <Parameter name="type">raster</Parameter>
         <!-- File names (by default) are relative to this XML file's location,
@@ -13,7 +13,7 @@
 
     <Style name="basic">
         <Rule>
-            <RasterSymbolizer />
+            <RasterSymbolizer/>
         </Rule>
     </Style>
 

@@ -12,10 +12,6 @@ DATABASES = {
     'default': {
         'ENGINE': "django.contrib.gis.db.backends.postgis",
         'NAME': "imaginary_lands",
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
     }
 }
 TIME_ZONE = None
@@ -25,7 +21,10 @@ USE_L10N = True
 
 MEDIA_ROOT = ''
 MEDIA_URL = '/static_data/'
-ADMIN_MEDIA_PREFIX = '/media/'
+STATIC_URL = "/media/"
+STATICFILES_DIR = (
+    os.path.join(PROJ_ROOT, "media"),
+)
 
 SECRET_KEY = '(okqqmuqmi_%10@ob3jn&@@s-qo(lnz9x0w=rc_9z)4jz0y+tl'
 
@@ -53,6 +52,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.admin',
     "django.contrib.gis",
+    "django.contrib.staticfiles",
     "lands",
     "adventure",
     "interface",

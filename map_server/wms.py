@@ -7,7 +7,7 @@ http://trac.mapnik.org/wiki/OgcServer .
 import os
 import sys
 
-from mapnik.ogcserver.wsgi import WSGIApp
+from mapnik2.ogcserver.wsgi import WSGIApp
 
 
 PORT = 8001
