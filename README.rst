@@ -49,7 +49,7 @@ image for this presentation.
 
 The main graphic was done using the Gimp_, following tutorials at `The
 Cartographer's Guild`_ website. I have spent hours playing with their
-map-making tutorials and trying out different things.
+map-making tutorials and trying out different things. The `World Building`_ subreddit is also worth regularly dipping into for inspiration and critiques.
 
 The shapefiles describing the island boundaries and paths and points of
 interest were creating in QGis_, a professional level tool that is highly accessible to amateurs and with a very supportive online community of tutorials and tips.
@@ -57,6 +57,7 @@ interest were creating in QGis_, a professional level tool that is highly access
 .. _Gimp: http://http://www.gimp.org/
 .. _The Cartographer's Guild: http://www.cartographersguild.com/
 .. _QGis: http://www.qgis.org/
+.. _World Building: http://www.reddit.com/r/worldbuilding/
 
 Setting up
 ===========
